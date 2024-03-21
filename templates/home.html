@@ -64,6 +64,7 @@
     <h1>Student Exam Performance Indicator</h1>
 
     <form action="{% url 'app:predictdata' %}" method="post">
+
         <h1>
             <legend>Student Exam Performance Prediction</legend>
         </h1>
@@ -128,6 +129,7 @@
         <div class="mb-3">
             <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required/>
         </div>
+        {% csrf_token %}
     </form>
     <h2>
         THE prediction is {{results}}
