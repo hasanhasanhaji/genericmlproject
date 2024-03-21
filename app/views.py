@@ -7,4 +7,7 @@ def index_view(request):
 
 
 def predictdata_view(request):
-    return render(request, 'home.html')
+    if request.method == 'GET':
+        return render(request, 'home.html')
+    else:
+        pass
